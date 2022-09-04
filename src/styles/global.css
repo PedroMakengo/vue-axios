@@ -27,3 +27,13 @@ a {
 a:hover {
   opacity: 0.8;
 }
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+button {
+  background: none;
+  border: 0;
+}
