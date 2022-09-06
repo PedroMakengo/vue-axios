@@ -45,4 +45,14 @@ nav {
   background-color: #000;
   opacity: 0.8;
 }
+
+#menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.8;
+}
 </style>
