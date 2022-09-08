@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div id="menu-overlay">
-    <div id="menu-items">
+    <div id="menu-items" :class="classActive">
       <Logo classLogo="logo" />
       <ul>
         <li><a href="/">Home</a></li>
@@ -17,6 +17,12 @@
 import { Logo } from "@/components/atoms";
 
 export default {
+  props: {
+    classActive: {
+      type: String,
+      required: false
+    }
+  },
   components: { Logo },
 };
 </script>
@@ -40,9 +46,13 @@ export default {
   width: 60%;
   height: 100vh;
 
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
+}
+
+#menu-items.active {
+  display: flex;
 }
 
 ul {

@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <header>
-    <Nav :menuActive="menuActive" />
+    <Nav :menuActive="menuActive" :classActive="{ active: menuActive }" />
   </header>
 </template>
 

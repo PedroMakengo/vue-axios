@@ -9,7 +9,7 @@
       />
     </button>
 
-    <SideBarMenu v-if="menuActive" />
+    <SideBarMenu v-if="menuActive" :classActive="classActive" />
   </nav>
 </template>
 
@@ -20,6 +20,10 @@ import  SideBarMenu from "@/components/molecules/SideBarMenu.vue";
 export default {
   props: {
     menuActive: {
+      type: String,
+      required: false
+    },
+    classActive: {
       type: String,
       required: false
     }
