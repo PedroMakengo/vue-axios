@@ -9,14 +9,16 @@
       />
     </button>
 
-    <div id="menu-overlay"></div>
+    <MenuOverlay />
   </nav>
 </template>
 
 <script>
 import { Logo } from "@/components/atoms";
+import { MenuOverlay } from "@/components/molecules";
+
 export default {
-  components: { Logo },
+  components: { Logo, MenuOverlay },
 };
 </script>
 
@@ -34,25 +36,5 @@ nav {
 
 #menu-button img {
   width: 100%;
-}
-
-#menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 40%;
-  height: 100vh;
-  background-color: #000;
-  opacity: 0.8;
-}
-
-#menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 40%;
-  height: 100vh;
-  background-color: #000;
-  opacity: 0.8;
 }
 </style>
