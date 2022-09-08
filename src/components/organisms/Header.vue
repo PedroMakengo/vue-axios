@@ -1,13 +1,16 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <header>
-    <Nav />
+    <Nav :menuActive="menuActive" />
   </header>
 </template>
 
 <script>
 import { Nav } from "@/components/molecules";
 export default {
+  data() {
+    return { menuActive: false };
+  },
   components: { Nav },
 };
 </script>

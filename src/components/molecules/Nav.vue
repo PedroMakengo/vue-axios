@@ -9,7 +9,7 @@
       />
     </button>
 
-    <SideBarMenu />
+    <SideBarMenu v-if="menuActive" />
   </nav>
 </template>
 
@@ -18,6 +18,12 @@ import { Logo } from "@/components/atoms";
 import  SideBarMenu from "@/components/molecules/SideBarMenu.vue";
 
 export default {
+  props: {
+    menuActive: {
+      type: String,
+      required: false
+    }
+  },
   components: { Logo, SideBarMenu },
 };
 </script>
