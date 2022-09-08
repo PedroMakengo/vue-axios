@@ -1,29 +1,33 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div id="menu-overlay">
+  <div class="sidebar">
+    <div id="menu-overlay"></div>
     <div id="menu-items" :class="classActive">
       <Logo classLogo="logo" />
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/videos">Video</a></li>
-        <li><a href="/sobre">Sobre</a></li>
-        <li><a href="/contato">Contato</a></li>
+        <LinkNavegator to="/" text="Home" />
+        <LinkNavegator to="/videos" text="Video" />
+        <LinkNavegator to="/sobre" text="Sobre" />
+        <LinkNavegator to="/contato" text="Contato" />
       </ul>
     </div>
   </div>
 </template>
 
 <script lang="js">
-import { Logo } from "@/components/atoms";
+import { Logo, LinkNavegator } from "@/components/atoms";
 
 export default {
+  data(){
+    return {}
+  },
   props: {
     classActive: {
       type: String,
       required: false
     }
   },
-  components: { Logo },
+  components: { Logo, LinkNavegator },
 };
 </script>
 
@@ -61,9 +65,5 @@ ul {
 
 ul li {
   margin: 20px 0;
-}
-
-ul li a {
-  color: var(--color-text-light);
 }
 </style>

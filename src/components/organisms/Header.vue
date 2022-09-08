@@ -9,9 +9,17 @@
 import { Nav } from "@/components/molecules";
 export default {
   data() {
-    return { menuActive: false };
+    return { menuActive: true };
   },
   components: { Nav },
+  methods: {
+    openMenu: function () {
+      this.menuActive = true;
+    },
+    closeMenu: function () {
+      this.menuActive = false;
+    },
+  },
 };
 </script>
 
