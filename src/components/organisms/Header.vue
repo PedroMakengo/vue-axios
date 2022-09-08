@@ -1,7 +1,12 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <header>
-    <Nav :menuActive="menuActive" :classActive="{ active: menuActive }" />
+    <Nav
+      :menuActive="menuActive"
+      :classActive="{ active: menuActive }"
+      @openMenu="openMenu"
+      @closeMenu="closeMenu"
+    />
   </header>
 </template>
 
@@ -9,7 +14,7 @@
 import { Nav } from "@/components/molecules";
 export default {
   data() {
-    return { menuActive: true };
+    return { menuActive: false };
   },
   components: { Nav },
   methods: {

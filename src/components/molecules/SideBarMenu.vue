@@ -5,10 +5,12 @@
     <div id="menu-items" :class="classActive">
       <Logo classLogo="logo" />
       <ul>
-        <LinkNavegator to="/" text="Home" />
-        <LinkNavegator to="/videos" text="Video" />
-        <LinkNavegator to="/sobre" text="Sobre" />
-        <LinkNavegator to="/contato" text="Contato" />
+        <LinkNavegator
+          v-for="link of links"
+          :key="link.id"
+          :to="link.to"
+          :text="link.text"
+        />
       </ul>
     </div>
   </div>
@@ -19,7 +21,14 @@ import { Logo, LinkNavegator } from "@/components/atoms";
 
 export default {
   data(){
-    return {}
+    return {
+      links: [
+        { id: 1, to: "/", text:"Home"},
+        { id: 2, to: "/videos", text:"Vídeos"},
+        { id: 3, to: "/sobre", text:"Sobre"},
+        { id: 4, to: "/contato", text:"Contato"},
+      ]
+    }
   },
   props: {
     classActive: {

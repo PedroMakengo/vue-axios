@@ -2,7 +2,7 @@
 <template>
   <nav class="container">
     <Logo />
-    <button id="menu-button">
+    <button id="menu-button" @click="$emit('openMenu')">
       <img
         src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/menu.svg"
         alt="Abrir menu"
