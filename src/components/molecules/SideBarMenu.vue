@@ -2,7 +2,7 @@
 <template>
   <div id="menu-overlay">
     <div id="menu-items">
-      <Logo />
+      <Logo classLogo="logo" />
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/videos">Video</a></li>
@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script>
+<script lang="js">
 import { Logo } from "@/components/atoms";
 
 export default {
@@ -39,5 +39,21 @@ export default {
   background-color: var(--color-background-nav);
   width: 60%;
   height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  text-align: center;
+}
+
+ul li {
+  margin: 20px 0;
+}
+
+ul li a {
+  color: var(--color-text-light);
 }
 </style>

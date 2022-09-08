@@ -37,3 +37,7 @@ button {
   background: none;
   border: 0;
 }
+
+ul {
+  list-style: none;
+}

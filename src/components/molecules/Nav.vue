@@ -9,16 +9,16 @@
       />
     </button>
 
-    <MenuOverlay />
+    <SideBarMenu />
   </nav>
 </template>
 
-<script>
+<script lang="js">
 import { Logo } from "@/components/atoms";
-import { MenuOverlay } from "@/components/molecules";
+import  SideBarMenu from "@/components/molecules/SideBarMenu.vue";
 
 export default {
-  components: { Logo, MenuOverlay },
+  components: { Logo, SideBarMenu },
 };
 </script>
 
