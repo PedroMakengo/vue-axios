@@ -9,7 +9,11 @@
       />
     </button>
 
-    <SideBarMenu v-if="menuActive" :classActive="classActive" />
+    <SideBarMenu
+      v-if="menuActive"
+      :classActive="classActive"
+      @closeMenu="closeMenu"
+    />
   </nav>
 </template>
 
@@ -26,6 +30,10 @@ export default {
     classActive: {
       type: String,
       required: false
+    },
+    closeMenu: {
+      type: Function,
+      required: true
     }
   },
   components: { Logo, SideBarMenu },

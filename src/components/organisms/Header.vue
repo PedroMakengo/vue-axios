@@ -5,7 +5,7 @@
       :menuActive="menuActive"
       :classActive="{ active: menuActive }"
       @openMenu="openMenu"
-      @closeMenu="closeMenu"
+      :closeMenu="closeMenu"
     />
   </header>
 </template>

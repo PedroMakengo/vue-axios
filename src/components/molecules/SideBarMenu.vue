@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="sidebar">
-    <div id="menu-overlay"></div>
+    <div id="menu-overlay" @click="$emit('closeMenu')"></div>
     <div id="menu-items" :class="classActive">
       <Logo classLogo="logo" />
       <ul>
