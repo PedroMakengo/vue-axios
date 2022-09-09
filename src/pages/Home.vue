@@ -13,10 +13,6 @@
   </main>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style scoped>
 main {
   background-color: var(--color-background-home);

@@ -12,7 +12,7 @@
 <script>
 import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
-import Home from "@/pages/Home.vue";
+import { Home, Videos } from "@/pages";
 
 export default {
   name: "App",
@@ -24,6 +24,7 @@ export default {
   components: {
     Header,
     Home,
+    Videos,
     Footer,
   },
 
