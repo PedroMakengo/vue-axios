@@ -30,4 +30,10 @@ export default {
   margin-top: 30px;
   margin-bottom: 10px;
 }
+
+@media (min-width: 700px) {
+  .logo {
+    display: none;
+  }
+}
 </style>

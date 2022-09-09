@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="sidebar">
-    <div id="menu-overlay" @click="$emit('closeMenu')"></div>
+    <div id="menu-overlay" v-if="menuActive" @click="$emit('closeMenu')"></div>
     <div id="menu-items" :class="classActive">
       <Logo classLogo="logo" />
       <ul>
@@ -32,6 +32,10 @@ export default {
   },
   props: {
     classActive: {
+      type: String,
+      required: false
+    },
+    menuActive: {
       type: String,
       required: false
     }
@@ -74,5 +78,29 @@ ul {
 
 ul li {
   margin: 20px 0;
+}
+
+@media (min-width: 700px) {
+  #menu-overlay {
+    display: none;
+  }
+
+  #menu-items {
+    display: flex;
+    position: static;
+    height: 60px;
+    width: auto;
+  }
+
+  ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  ul li {
+    margin: 0;
+    margin-left: 20px;
+  }
 }
 </style>
