@@ -10,6 +10,7 @@
           :key="link.id"
           :to="link.to"
           :text="link.text"
+          @click.prevent="$emit('mudarRota', link.text)"
         />
       </ul>
     </div>
@@ -24,7 +25,7 @@ export default {
     return {
       links: [
         { id: 1, to: "/", text:"Home"},
-        { id: 2, to: "/videos", text:"Vídeos"},
+        { id: 2, to: "/videos", text:"Videos"},
         { id: 3, to: "/sobre", text:"Sobre"},
         { id: 4, to: "/contato", text:"Contato"},
       ]
@@ -38,7 +39,7 @@ export default {
     menuActive: {
       type: String,
       required: false
-    }
+    },
   },
   components: { Logo, LinkNavegator },
 };

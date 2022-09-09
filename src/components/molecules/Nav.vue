@@ -14,6 +14,7 @@
       :menuActive="menuActive"
       :classActive="classActive"
       @closeMenu="closeMenu"
+      @mudarRota="mudarRota"
     />
   </nav>
 </template>
@@ -33,6 +34,10 @@ export default {
       required: false
     },
     closeMenu: {
+      type: Function,
+      required: true
+    },
+    mudarRota: {
       type: Function,
       required: true
     }

@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <Header />
-    <Home />
+    <Header :mudarRota="mudarRota" />
+    <Home v-if="statePage === 'Home'" />
+    <Videos v-if="statePage === 'Videos'" />
+    <Sobre v-if="statePage === 'Sobre'" />
+    <Contato v-if="statePage === 'Contato'" />
     <Footer />
   </div>
 </template>
@@ -14,10 +17,20 @@ import Home from "@/pages/Home.vue";
 export default {
   name: "App",
 
+  data() {
+    return { statePage: "Home" };
+  },
+
   components: {
     Header,
     Home,
     Footer,
+  },
+
+  methods: {
+    mudarRota(link) {
+      this.statePage = link;
+    },
   },
 };
 </script>

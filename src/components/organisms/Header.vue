@@ -6,6 +6,7 @@
       :classActive="{ active: menuActive }"
       @openMenu="openMenu"
       :closeMenu="closeMenu"
+      :mudarRota="mudarRota"
     />
   </header>
 </template>
@@ -23,6 +24,12 @@ export default {
     },
     closeMenu: function () {
       this.menuActive = false;
+    },
+  },
+  props: {
+    mudarRota: {
+      type: Function,
+      required: true,
     },
   },
 };
