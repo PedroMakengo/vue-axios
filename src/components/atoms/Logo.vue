@@ -1,12 +1,12 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <a href="/">
+  <router-link to="/">
     <img
       src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/wdev.svg"
       alt="WDED"
       :class="[classLogo, 'logoDefault']"
     />
-  </a>
+  </router-link>
 </template>
 
 <script>

@@ -11,6 +11,7 @@
           :to="link.to"
           :text="link.text"
           @click.prevent="$emit('mudarRota', link.text)"
+          @click="$emit('closeMenu')"
         />
       </ul>
     </div>

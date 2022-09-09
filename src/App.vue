@@ -12,7 +12,7 @@
 <script>
 import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
-import { Home, Videos } from "@/pages";
+import { Home, Videos, Sobre, Contato } from "@/pages";
 
 export default {
   name: "App",
@@ -25,6 +25,8 @@ export default {
     Header,
     Home,
     Videos,
+    Sobre,
+    Contato,
     Footer,
   },
 

@@ -1,6 +1,6 @@
 <template>
   <li class="link-navegator">
-    <a :href="to">{{ text }}</a>
+    <router-link class="link" :to="to">{{ text }}</router-link>
   </li>
 </template>
 
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style scoped>
-a {
+.link {
   color: var(--color-text-light);
 }
 </style>
