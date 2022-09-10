@@ -1,0 +1,56 @@
+:root {
+  --color-background: #f3f3f3;
+  --color-background-nav: #2b3d50;
+  --color-background-home: #344960;
+  --color-text-light: #ededed;
+  --color-text-title: #ff5555;
+  --color-text-dark: #3d3d3d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  background-color: var(--color-background);
+}
+
+a {
+  text-decoration: none;
+  transition: 0.2s opacity;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+button {
+  background: none;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  width: 100%;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: var(--color-text-title);
+  margin: 40px 0;
+  font-size: 30px;
+}
