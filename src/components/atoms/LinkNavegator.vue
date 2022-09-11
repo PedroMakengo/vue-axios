@@ -22,5 +22,6 @@ export default {
 <style scoped>
 .link {
   color: var(--color-text-light);
+  cursor: pointer;
 }
 </style>
